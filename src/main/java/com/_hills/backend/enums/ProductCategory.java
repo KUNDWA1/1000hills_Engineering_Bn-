@@ -1,0 +1,12 @@
+package com._hills.backend.enums;
+
+public enum ProductCategory {
+    CONSTRUCTION_TOOLS,
+    BUILDING_SUPPLIES,
+    SAFETY_EQUIPMENT,
+    PLUMBING_MATERIALS,
+    ELECTRICAL_SUPPLIES,
+    SOLAR_AND_ENERGY,
+    GENERATORS_AND_POWER,
+    SECURITY_AND_IT
+}

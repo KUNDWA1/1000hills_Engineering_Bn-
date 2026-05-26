@@ -2,8 +2,11 @@ FROM eclipse-temurin:17
 
 WORKDIR /app
 
-COPY target/backend-0.0.1-SNAPSHOT.jar app.jar
+COPY . .
+
+RUN chmod +x mvnw
+RUN ./mvnw clean install -DskipTests
 
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-jar","target/backend-0.0.1-SNAPSHOT.jar"]

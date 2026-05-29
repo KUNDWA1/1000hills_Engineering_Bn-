@@ -1,6 +1,7 @@
 package com._hills.backend.entity;
 
 import com._hills.backend.enums.DocumentType;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,6 +18,7 @@ public class VendorDocument {
 
     @ManyToOne
     @JoinColumn(name = "vendor_profile_id", nullable = false)
+    @JsonIgnore
     private VendorProfile vendorProfile;
 
     @Enumerated(EnumType.STRING)

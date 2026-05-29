@@ -53,7 +53,7 @@ public class VendorOrder {
     @Builder.Default
     private LocalDateTime assignedAt = LocalDateTime.now();
 
-    @OneToMany(mappedBy = "vendorOrder", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "vendorOrder", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @Builder.Default
     @JsonIgnoreProperties("vendorOrder")
     private List<VendorOrderItem> items = new ArrayList<>();
